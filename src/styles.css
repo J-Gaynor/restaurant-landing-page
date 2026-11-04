@@ -1,0 +1,185 @@
+* {
+    box-sizing: content-box;
+    padding: 0;
+    margin: 0;
+    border: none;
+    font-size: 16px;
+    width: 100%;
+    font-family: Palatino, 'Palatino Linotype', 'Book Antiqua', Georgia, serif;
+}
+
+html {
+    background-color: #FFEEE2;
+}
+
+body {
+    height: 100vh;
+    display: grid;
+}
+
+header {
+    background-color: #87A878;
+    position: sticky;
+    height: 3rem;
+    margin-bottom: 1rem;
+}
+
+footer {
+    margin-top: 1rem;
+    background-color: #87A878;
+    color: #FFEEE2;
+    position: relative;
+    bottom: 0;
+    height: 2rem;
+    align-items: center;
+    justify-self: bottom;
+    align-self: flex-end;
+}
+
+footer>p {
+    grid-column-start: 2;
+    text-align: center;
+}
+
+header,
+#content,
+footer {
+    display: grid;
+    grid-auto-flow: column;
+    grid-template-columns: 1fr 8fr 1fr;
+}
+
+.nav-btn {
+    width: auto;
+}
+
+nav {
+    grid-column-start: 2;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+#home-btn {
+    margin-right: auto;
+    font-size: 1.75rem;
+}
+
+.home-container {
+    display: grid;
+    justify-content: center;
+    text-align: center;
+    width: 60%;
+    justify-self: center;
+}
+
+h1 {
+    color: #E85D75;
+    font-size: 3rem;
+}
+
+h4 {
+    font-size: 1.5rem;
+}
+
+.restaurant-image {
+    width: 60%;
+    justify-self: center;
+}
+
+#content>* {
+    grid-column-start: 2;
+    display: grid;
+}
+
+.nav-btn {
+    color: #FFEEE2;
+    background-color: #87A878;
+    font-size: 1.25rem;
+}
+
+.nav-btn:hover {
+    cursor: pointer;
+}
+
+.menu-container {
+    display: grid;
+    gap: 2rem;
+}
+
+.menu-header {
+    grid-column: span 4;
+}
+
+.intro-message {
+    font-weight: bold;
+}
+
+.dishes-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 3rem;
+    row-gap: 1rem;
+}
+
+h2 {
+    color: #E85D75;
+    font-size: 2rem;
+}
+
+.dish-container {
+    box-shadow: 2px 2px 2px grey;
+    padding: 1rem;
+    display: grid;
+    grid-template-rows: repeat(4, 1fr);
+    background-color: white;
+}
+
+.dish-desc {
+    font-style: italic;
+}
+
+.dish-price {
+    display: flex;
+    align-items: center;
+}
+
+.starters-container .dish-container:first-of-type,
+.deserts-container .dish-container:first-of-type {
+    grid-column-start: 2;
+}
+
+.reservation-container {
+    display: grid;
+    gap: 3rem;
+    row-gap: 1rem;
+}
+
+form {
+    display: grid;
+    grid-template-columns: repeat (4, 1fr);
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-auto-flow: row;
+    gap: 2rem;
+}
+
+label {
+    width: 100%;
+}
+
+.submit-btn {
+    background-color: #E85D75;
+    color: #FFEEE2;
+    height: 2rem;
+    width: 50%;
+    justify-self: center;
+    grid-column: span 4;
+}
+
+.submit-btn:hover {
+    cursor: pointer;
+}
+
+input {
+    padding: 0.5rem;
+}

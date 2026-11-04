@@ -1,7 +1,7 @@
 export default function createElement(tag, className, text = "") {
     let element = document.createElement(tag);
     if (className) {
-        element.classList.add(className);
+        element.className = className;
     }
     if (text) {
         element.textContent = text;
